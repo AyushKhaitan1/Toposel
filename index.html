@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolly - Knock Out Flakes | Interactive 3D Showcase</title>
+    <meta name="description" content="Experience the ultimate dandruff clarification with Bolly shampoo. Interact with our 3D product model and explore performance-driven haircare.">
+    <!-- Google Fonts: Inter (body) & Outfit (headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-glow"></div>
+    <div class="bg-circle"></div>
+
+    <header class="site-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="#" id="logo-link" class="logo">bolly</a>
+            
+            <!-- Navigation -->
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#" id="nav-shop" class="active">Shop +</a></li>
+                    <li><a href="#" id="nav-about">About</a></li>
+                    <li><a href="#" id="nav-blog">Blog</a></li>
+                    <li><a href="#" id="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Cart -->
+            <div class="cart-container" id="cart-btn" role="button" tabindex="0" aria-label="Shopping Cart">
+                <span class="cart-text">Cart</span>
+                <div class="cart-icon-wrapper">
+                    <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="showcase">
+        <div class="showcase-container">
+            <!-- Left Column: Branding & Headline -->
+            <div class="col col-left">
+                <div class="badge-container">
+                    <span class="badge-text">FROM ROOT</span>
+                    <span class="badge-highlight">TO SHINE</span>
+                </div>
+                <h1 class="headline">
+                    KNOCK<br>OUT<br>FLAKES
+                </h1>
+            </div>
+
+            <!-- Middle Column: 3D Product Interactive Viewer -->
+            <div class="col col-middle">
+                <!-- 3D Canvas Container -->
+                <div id="canvas-container">
+                    <div class="loading-spinner" id="loader">
+                        <div class="spinner"></div>
+                        <span>Loading 3D Experience...</span>
+                    </div>
+                </div>
+                <!-- Interactive Instruction Overlay -->
+                <div class="interaction-hint">
+                    <svg class="drag-hand" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v5"></path>
+                        <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v6"></path>
+                        <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v4.5"></path>
+                        <path d="M6 10V8a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v7c0 4.97 4.03 9 9 9h3c3.87 0 7-3.13 7-7V11a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2"></path>
+                    </svg>
+                    <span>Drag to rotate shampoo bottle</span>
+                </div>
+            </div>
+
+            <!-- Right Column: Description & Action -->
+            <div class="col col-right">
+                <p class="description">
+                    Journey in to the<br><strong>wonderful world of<br>shampoo</strong>
+                </p>
+                <a href="#" id="explore-btn" class="explore-btn" aria-label="Explore more shampoo products">
+                    <span class="btn-text">EXPLORE MORE</span>
+                    <span class="btn-icon-wrapper">
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer / Legal (Small responsive credits) -->
+    <footer class="site-footer">
+        <p>&copy; 2026 bolly. All rights reserved. Created for Frontend Showcase.</p>
+    </footer>
+
+    <!-- Three.js and GSAP libraries via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- App Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
